@@ -1,0 +1,7 @@
+# Docker MySQL data
+/docker/mysql/data/
+
+# Laravel
+/src/.env
+/src/vendor
+/src/node_modules
