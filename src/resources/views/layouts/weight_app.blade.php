@@ -13,19 +13,28 @@
 
 <body>
     <header class="header">
-        <h1 class="site__title">PiGLy</h1>
-        <div class="nav">
-            <a href="/weight_logs/goal_setting" class="nav__setting">
-                <i class="fa-solid fa-gear"></i>
-                目標体重設定
-            </a>
-            <form action="/logout" method="post">
-                @csrf
-                <button type="submit" class="nav__logout">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    ログアウト
-                </button>
-            </form>
+        <div class="header__inner">
+            <h1 class="site__title">PiGLy</h1>
+            <div class="header__right">
+                @auth
+                <div class="header__user">
+                    {{ Auth::user()->name}}さん
+                </div>
+                @endauth
+                <div class="nav">
+                    <a href="/weight/goal_setting" class="nav__setting">
+                        <i class="fa-solid fa-gear"></i>
+                        目標体重設定
+                    </a>
+                    <form action="/auth/logout" method="post">
+                        @csrf
+                        <button type="submit" class="nav__logout">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            ログアウト
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </header>
 

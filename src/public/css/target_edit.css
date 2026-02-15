@@ -1,0 +1,78 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.page {
+    max-width: 60%;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.card {
+    padding: 15px 0;
+}
+
+.page__title {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.form__group {
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.form__group input {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.error {
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 13%;
+    padding-bottom: 15px;
+}
+
+.form__actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    width: 160px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 30px 0;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn--gray {
+    background-color: #ddd;
+    color: #000;
+    border: 1px solid #ddd;
+}
+
+.btn__return a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn--primary {
+    background-color: #8646ff;
+    color: #fff;
+    border: none;
+}

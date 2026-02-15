@@ -42,14 +42,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function weightTarget()
+    public function weightTargets()
     {
-        return $this->hasOne(WeightTarget::class);
+        return $this->hasMany(WeightTarget::class);
     }
 
-    public function weightLog()
+    public function weightLogs()
     {
-        return $this->hasOne(WeightLog::class);
+        return $this->hasMany(WeightLog::class);
     }
 
 

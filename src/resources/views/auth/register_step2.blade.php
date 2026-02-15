@@ -12,19 +12,23 @@
 @endsection
 
 @section('content')
-    <form class="auth__form" action="/register/step2"  method="post">
+    <form class="auth__form" action="/register/complete"  method="post">
         @csrf
         <div class="auth__input">
             <label>現在の体重</label>
-            <input type="number" name="now_weight" step="0.1" min="0" placeholder="現在の体重を入力" >
+            <input type="number" name="weight" step="0.1" min="0" value="{{ old('weight') }}" placeholder="現在の体重を入力" >
             <span>kg</span>
-            <div class="error">現在の体重を入力してください</div>
+            @error('weight')
+            <div class="error">{{ $message }}</div>
+            @enderror
         </div>
         <div class="auth__input">
             <label>目標の体重</label>
-            <input type="number" name="goal_weight" step="0.1" min="0" placeholder="目標の体重を入力">
+            <input type="number" name="target_weight" step="0.1" min="0" value="{{ old('target_weight') }}" placeholder="目標の体重を入力">
             <span>kg</span>
-            <div class="error">目標の体重を入力してください</div>
+            @error('target_weight')
+            <div class="error">{{ $message }}</div>
+            @enderror
         </div>
 
         <div class="move__page">
